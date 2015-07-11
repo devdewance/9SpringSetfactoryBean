@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="cusID" class="com.test.Customer">
+			<property name="sets" >
+				<bean class="org.springframework.beans.factory.config.SetFactoryBean">
+					<property name="targetSetClass" value="java.util.HashSet"></property>
+					<property name="sourceSet"> 
+						<list>
+							<value>SITA</value>
+							<value>RAM</value>
+							<value>ROM</value>
+							<value>DOM</value>
+							<value>DOM</value>
+					  </list>
+					</property>
+			 </bean>
+		 </property>
+	</bean>
+</beans>
